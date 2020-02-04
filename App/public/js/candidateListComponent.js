@@ -225,7 +225,7 @@
                                     Delete All
                                 </a>
                             </div>
-                            <div style={{marginBottom: 16, marginTop: 16 }}>
+                            <div style={{marginBottom: 16, marginTop: 16 }} >
                                 <label className={"block"} style={{marginBottom: 2}}>Number Of Draws per batch</label>
                                 <input value={this.state.numberOfDraws} type="number" placeholder="Number Of Draws" id="number-of-draws"
                                        onChange={this.handleChangeNumberOfDraws} min={1} max={Math.max(this.state.items.length, 1)}/>
@@ -235,8 +235,12 @@
                                 <input value={this.state.fontSize} type="number" placeholder="Font Size (in pixel)" id="font-size"
                                        onChange={this.handleChangeFontSize}/>
                             </div>
+                            <div style={{marginBottom: 16, marginTop: 16}}>
+                                <label className={"block"} style={{marginBottom: 2}}>Message</label>
+                                <input type="text" placeholder="Type Your Message" id="message"/>
+                            </div>
                             <label htmlFor="rand-without-replacement" className="text-left">
-                                <input checked={!!this.state.isWithoutReplacement} onChange={this.setWithoutReplacement} type="checkbox"
+                                <input checked={!!this.state.isWithoutReplacement} onChange={this.setWithoutReplacement} type="checkbox" value="True"
                                        id="rand-without-replacement" name="without-replacement"/>
                                 Draw without replacement
                             </label>

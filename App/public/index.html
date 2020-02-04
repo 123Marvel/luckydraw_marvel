@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body onload="window.scrollTo(0, 1);">
+
+
 <div class="wrapper">
     <div class="col span_1_of_3">
         <div class="logo tooltip-container animated slideInLeft">
-            <img src="images/logo.svg" alt="Lucky Draw" class="shadowed"/>
+            <img src="images/bni.png" alt="Lucky Draw" class="shadowed"/>
             <div class="tooltip hide">
                 <span class="text">Edit Items</span>
                 <span class="arrow-up"></span>
@@ -30,9 +32,9 @@
         </div>
 
         <!--Start View-->
-        <div class="main-container animated fadeInDown" id="start-view-container">
+        <div class="main-container animated fadeInDown" id="start-view-container" >
             <h1 class="ready-heading">Ready?</h1>
-            <button class="btn-start btn positive-btn">
+            <button class="btn-start btn positive-btn" onclick="myFunction()">
                 <i class="fa fa-compass show animated rotateIn"></i>
                 <span class="text hide animated">Go!</span>
             </button>
@@ -48,16 +50,49 @@
             <div id="winner-container">
 
             </div>
-            <button class="btn-start btn positive-btn">
+
+
+            <script>
+function myFunction() {
+  var x = document.getElementById("message").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+        <table>
+            <tr>
+                <td>
+                    <button class="btn-start btn positive-btn" >
                 <i class="fa fa-compass show animated rotateIn"></i>
                 <span class="text hide animated">Again</span>
             </button>
+                </td>
+                <td>
+                    <div >
+                        <script>
+                        .max-lines {
+  display: block;/* or inline-block */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+}
+</script>
+                <p id="demo" align="center" class="max-lines" style="color:blue;font-size:70px;" ></p>
+            </div>
+                </td>
+            </tr>
+        </table>
+
+
             <div style="margin: 4rem 0 1rem .5rem;">
                 <button class="btn" id="save-result">Save Result</button>
             </div>
         </div>
 
     </div>
+
 </div>
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/filesaver/FileSaver.min.js"></script>
@@ -69,4 +104,8 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script type="text/jsx" src="js/candidateListComponent.js"></script>
 </body>
+ <audio src="/music/theme/Recording.m4a" controls>
+<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+    <embed src="/music/theme/Recording.m4a" width="180" height="90" hidden="true" />
+</audio>
 </html>
